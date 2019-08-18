@@ -17,10 +17,10 @@
 .logo {
 
   &__link {
-    display: block;
-    width: 135px;
-    height: 25px;
-    background: url('../img/logo/logo-footer.svg') no-repeat center center / contain;
+
+    &_footer {
+      background: url('../img/logo/logo-footer.svg') no-repeat center center / contain;
+    }
   }
 }
 
@@ -34,17 +34,17 @@
 
   &__item {
 
-    &:not(:last-child) {
-      margin-right: 20px;
+    &_footer {
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
     }
   }
 
   &__link {
-    @include font-secondary(16px, $color-1, 400);
-    transition: all 0.25s;
 
-    &:hover {
-      @include font-secondary(16px, $color-3, 400);
+    &_footer {
+      @include font-secondary(16px, $color-1, 400);
     }
   }
 }
@@ -143,17 +143,19 @@
 
   &__link {
     display: flex;
-    width: 26px;
-    height: 26px;
+
+    &:hover {
+      .social__svg {
+        fill: $color-3;
+      }
+    }
   }
 
   &__svg {
+    width: 26px;
+    height: 26px;
     fill: $color-1;
     transition: all 0.25s;
-
-    &:hover {
-      fill: $color-3;
-    }
   }
 }
 

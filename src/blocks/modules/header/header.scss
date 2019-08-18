@@ -1,0 +1,113 @@
+.header {
+  background-color: $color-1;
+  position: sticky;
+  z-index: 200;
+  top: 0;
+  padding: 10px 0;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.logo {
+
+  &__link {
+    display: block;
+    width: 135px;
+    height: 25px;
+    background: url('../img/logo/logo.svg') no-repeat center center / contain;
+  }
+}
+
+.nav {
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__link {
+    @include font-secondary(16px, $color-2, 400);
+    transition: all 0.25s;
+
+    &:hover {
+      @include font-secondary(16px, $color-3, 400);
+    }
+  }
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 10px;
+  }
+
+  &__text {
+    @include font-secondary(14px, $color-2, 400);
+  }
+
+  &__link {
+    @include font-secondary(12px, $color-11, 400);
+    transition: all 0.25s;
+
+    &:hover {
+      @include font-secondary(12px, $color-3, 400);
+    }
+  }
+
+  &__avatar {
+  }
+
+  &__picture {
+  }
+
+  &__img {
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  &__action {
+    margin-left: 15px;
+  }
+
+  &__button {
+    display: flex;
+
+    &:disabled {
+      .account__svg {
+        fill: $color-9;
+      }
+    }
+
+    &:hover:enabled {
+      .account__svg {
+        fill: $color-90;
+      }
+    }
+  }
+
+  &__svg {
+    width: 24px;
+    height: 20px;
+    fill: $color-8;
+    transition: all 0.25s;
+  }
+}

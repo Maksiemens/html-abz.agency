@@ -2,7 +2,7 @@
   <div class="container header__container">
 
     <div class="logo">
-      <a class="logo__link" href="#!"></a>
+      <a class="logo__link" href="/"></a>
     </div>
 
     <nav class="nav">
@@ -31,13 +31,17 @@
         <a class="account__link" href="#!">Superstar@gmail.com</a>
       </div>
       <div class="account__avatar">
-        <picture>
-
+        <picture class="account__picture">
+          <source srcset="./img/user-superstar-1x.webp 1x, ./img/user-superstar-2x.webp 2x" type="image/webp">
+          <img class="account__img" src="./img/user-superstar-1x.jpg" srcset="./img/user-superstar-2x.jpg 2x" alt="Acount image">
         </picture>
-        <img class="account__img" src="" alt="Acount image">
       </div>
       <div class="account__action">
-        <button class="account__button"></button>
+        <button class="account__button" >
+          <svg class="account__svg">
+            <use xlink:href="./img/sprites/sprite.svg#sign-out"></use>
+          </svg>
+        </button>
       </div>
     </div>
   </div>
