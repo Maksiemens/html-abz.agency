@@ -8,4 +8,4 @@
 * транспайлер [Babel](https://babeljs.io/) для поддержки современного JavaScript (ES6) в браузерах
 * [Webpack](https://webpack.js.org/) для сборки JavaScript-модулей
 * жёсткий кодгайд
-* сама сборка [@gulp-scss-starter](https://github.com/andreyalexeich/gulp-scss-starter)
+* сама сборка [gulp-scss-starter](https://github.com/andreyalexeich/gulp-scss-starter)
