@@ -10,19 +10,20 @@ import groupmedia from "gulp-group-css-media-queries";
 import autoprefixer from "gulp-autoprefixer";
 import sourcemaps from "gulp-sourcemaps";
 import plumber from "gulp-plumber";
+import notify from "gulp-notify";
 import browsersync from "browser-sync";
 import debug from "gulp-debug";
 import yargs from "yargs";
 
-const argv = yargs.argv,
-    production = !!argv.production;
+const argv = yargs.argv, production = !!argv.production;
 
 gulp.task("styles", () => {
     return gulp.src(paths.styles.src)
+        .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
         .pipe(gulpif(!production, sourcemaps.init()))
-        .pipe(plumber())
         .pipe(sass())
-        .pipe(groupmedia())
+        // .pipe(groupmedia())
+        .pipe(gulpif(production, groupmedia()))
         .pipe(gulpif(production, autoprefixer({
             cascade: false,
             grid: true
@@ -47,7 +48,6 @@ gulp.task("styles", () => {
         .pipe(gulpif(production, rename({
             suffix: ".min"
         })))
-        .pipe(plumber.stop())
         .pipe(gulpif(!production, sourcemaps.write("./maps/")))
         .pipe(gulp.dest(paths.styles.dist))
         .pipe(debug({

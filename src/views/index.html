@@ -28,23 +28,20 @@
 	<body>
 		@@include("../blocks/modules/header/header.html")
 
-		@@include("../blocks/modules/banner/banner.html")
-
-		@@include("../blocks/modules/about-me/about-me.html")
-
-		@@include("../blocks/modules/relationships/relationships.html")
-
-		@@include("../blocks/modules/requrements/requrements.html")
-
-		@@include("../blocks/modules/users/users.html")
-
-		@@include("../blocks/modules/sign-up/sign-up.html")
+		<main class="main">
+			@@include("../blocks/modules/banner/banner.html")
+			@@include("../blocks/modules/about-me/about-me.html")
+			@@include("../blocks/modules/relationships/relationships.html")
+			@@include("../blocks/modules/requrements/requrements.html")
+			@@include("../blocks/modules/users/users.html")
+			@@include("../blocks/modules/sign-up/sign-up.html")
+		</main>
 
 		@@include("../blocks/modules/footer/footer.html")
-
+		@@include("../blocks/modules/alert/alert.html")
 
 		<a href="page.html">PAGE</a>
 		<script src="../js/main.js"></script>
-		<script src="../js/vendor.js"></script>
+		<!-- <script src="../js/vendor.js"></script> -->
 	</body>
 </html>

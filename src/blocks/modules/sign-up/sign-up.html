@@ -2,112 +2,75 @@
   <div class="container sign-up__container">
     <header class="heading">
       <h2 class="heading__title">Register to get a work</h2>
-      <h4 class="heading__subtitle">
+      <h3 class="heading__subtitle">
         Attention! After successful registration and alert,
         update the list of users in the block from the top
-      </h4>
+      </h3>
     </header>
 
-
     <form class="form">
-      <div class="form-control">
-        <label class="form-control__label" for="name">Name</label>
-        <input class="form-control__input" type="text" placeholder="Your name" id="name">
-      </div>
-
-      <div class="form-control">
-        <label class="form-control__label" for="email">Email</label>
-        <input class="form-control__input" type="email" placeholder="Your email" id="email">
-      </div>
-
-
-      <div class="form-control">
-        <label class="form-control__label" for="phone">Phone</label>
-        <input class="form-control__input" type="tel" placeholder="+38 (___)  ___ __ __" id="phone">
-      </div>
-
-      <!-- Select -->
-      <div class="form-group">
-        <div class="select">
-          <div class="select__control">
-            <input class="select__input" type="text" placeholder="Select your position" readonly>
-          </div>
-          <ul class="select__list">
-            <li class="select__item selected">First item</li>
-            <li class="select__item">Second item</li>
-            <li class="select__item">Thurd item</li>
-          </ul>
+      <div class="form__group form__group_left">
+        <div class="form__control">
+          <label class="form__label form__label_has-error" for="name">Name</label>
+          <input class="form__input form__input_has-error" type="text" placeholder="Your name" id="name" value="Some random name" autofocus>
+        </div>
+        <div class="form__feedback">
+          <span class="form__text form__text_error">Name is required.</span>
+          <span class="form__text form__text_error">Invalid name. Please, provide a valid name</span>
         </div>
       </div>
 
-      <!-- <div class="form-control">
-        <label class="form-control__label" for="name">Name</label>
-        <input class="form-control__input" type="text" placeholder="Your name" id="name">
-      </div> -->
+      <div class="form__group form__group_center">
+        <div class="form__control">
+          <label class="form__label" for="email">Email</label>
+          <input class="form__input" type="email" placeholder="Your email" id="email">
+        </div>
+        <div class="form__feedback hide">
+          <span class="form__text form__text_error">Email is required.</span>
+          <span class="form__text form__text_error">Invalid email. Please, provide a valid email</span>
+        </div>
+      </div>
 
-      <div class="form-action">
-        <button class="form-action__button" type="submit">Sign Up</button>
+      <div class="form__group form__group_right">
+        <div class="form__control">
+          <label class="form__label" for="phone">Phone</label>
+          <input class="form__input" type="tel" placeholder="+38 (___)  ___ __ __" id="phone">
+        </div>
+        <div class="form__feedback hide">
+          <span class="form__text form__text_error">Phone is required.</span>
+          <span class="form__text form__text_error">Invalid phone. Please, provide a valid phone</span>
+        </div>
+      </div>
+
+      <div class="form__group form__group_middle-size-left form__group_select">
+        <div class="form__control">
+          <input class="form__input form__input_select" type="text" placeholder="Select your position" readonly value="Select your position">
+        </div>
+        <ul class="form__list">
+          <li class="form__item form__item_selected">First item</li>
+          <li class="form__item">Second item</li>
+          <li class="form__item">Third item</li>
+        </ul>
+        <div class="form__feedback hide">
+          <span class="form__text form__text_error">Position is required. Please, choose a position</span>
+        </div>
+      </div>
+
+      <div class="form__group form__group_middle-size-right">
+        <div class="form__control form__control_file">
+          <input class="form__input form__input_upload" type="text" placeholder="Upload your photo">
+          <label class="form__label form__label_upload" for="file">Upload</label>
+          <input class="form__input form__input_file" type="file" placeholder="Select your position" id="file">
+        </div>
+        <div class="form__feedback">
+          <span class="form__text">File format jpg  up to 5 MB, the minimum size of 70x70px</span>
+          <span class="form__text form__text_error hide">File is required. Please, upload your photo</span>
+        </div>
+      </div>
+
+      <div class="form__group form__group_action">
+        <button class="form__button" disabled type="submit">Sign Up</button>
       </div>
     </form>
-
   </div>
-
 </section>
-
-
-
-
-
-<!--
-<div class="form-group">
-  <div class="form-control">
-    <label for="formGroupExampleInput">Example label</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Your name">
-  </div>
-</div>
--->
-
-
-
-
-<!--
-    <div class="form-group">
-        <div class="form-control">
-          <label for="formGroupExampleInput">Example label</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Your name">
-        </div>
-      </div>
-
-
-    <div class="form-group">
-        <div class="form-control">
-          <label for="formGroupExampleInput">Example label</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Your name">
-        </div>
-      </div>
-
-
-    <div class="form-group">
-        <div class="form-control">
-          <label for="formGroupExampleInput">Example label</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Your name">
-        </div>
-      </div>
-
-
-
-    <div class="form-group">
-        <div class="form-control">
-          <label for="formGroupExampleInput">Example label</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Your name">
-        </div>
-      </div> -->
-      <!-- https://datuhealth.github.io/floating-label/ -->
-
-
-
-      <!-- https://codepen.io/miniven/pen/ZJydge -->
-
-      <!-- http://qaru.site/questions/9813745/css-box-shadow-vs-overflow-hidden -->
-
-

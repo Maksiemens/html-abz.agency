@@ -10,9 +10,7 @@ import browsersync from "browser-sync";
 import debug from "gulp-debug";
 import yargs from "yargs";
 
-const webpackConfig = require("../webpack.config.js"),
-    argv = yargs.argv,
-    production = !!argv.production;
+const webpackConfig = require("../webpack.config.js"), argv = yargs.argv, production = !!argv.production;
 
 webpackConfig.mode = production ? "production" : "development";
 webpackConfig.devtool = production ? false : "source-map";
