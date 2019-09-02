@@ -57,10 +57,11 @@
       </div>
 
       <div class="form__group form__group_middle-size-right">
-        <div class="form__control form__control_file">
-          <input class="form__input form__input_upload" type="text" placeholder="Upload your photo">
-          <label class="form__label form__label_upload" for="file">Upload</label>
-          <input class="form__input form__input_file" type="file" placeholder="Select your position" id="file">
+        <div class="form__control form__control_file js-formControlUpload">
+          <input class="form__input form__input_file js-formInputUpload" type="file" id="file">
+          <input class="form__input form__input_upload" type="text" placeholder="Upload your photo" readonly>
+          <!-- <label class="form__label form__label_upload" for="file">Upload</label> -->
+          <button class="form__button" type="button">Upload</button>
         </div>
         <div class="form__feedback">
           <span class="form__text">File format jpg  up to 5 MB, the minimum size of 70x70px</span>
@@ -69,7 +70,7 @@
       </div>
 
       <div class="form__group form__group_action">
-        <button class="form__button" disabled type="submit">Sign Up</button>
+        <button class="form__button form__button_submit" disabled type="submit">Sign Up</button>
       </div>
     </form>
   </div>
